@@ -65,7 +65,7 @@ if st.session_state.last_response:
 st.subheader("📝 Live Document Editor")
 st.session_state.document_content = st.text_area("Compiled Report:", value=st.session_state.document_content, height=250)
 
-# --- NEW: ACTION BUTTONS (Download & Clear) ---
+# --- ACTION BUTTONS (Download & Clear) ---
 col_down, col_clear, col_empty = st.columns([0.2, 0.2, 0.6])
 
 with col_down:
@@ -98,7 +98,9 @@ if prompt := st.chat_input("Ask about your uploaded items..."):
                     gemini_parts.append(types.Part.from_bytes(data=f.getvalue(), mime_type=m_type))
             
             gemini_parts.append(prompt)
-            response = client.models.generate_content(model="gemini-2.0-flash", contents=gemini_parts)
+            
+            # --- MODEL UPDATED HERE TO 1.5 FLASH ---
+            response = client.models.generate_content(model="gemini-1.5-flash", contents=gemini_parts)
             
             st.session_state.last_response = response.text
             st.session_state.document_content += f"\n\n--- Analysis ---\n{response.text}"
