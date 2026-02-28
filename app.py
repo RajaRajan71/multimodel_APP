@@ -6,7 +6,9 @@ from dotenv import load_dotenv
 
 # 1. Setup
 load_dotenv()
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+# In Streamlit Cloud, it will look for GEMINI_API_KEY in secrets
+api_key = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key=api_key)
 
 st.set_page_config(page_title="Palludagam AI", layout="wide", page_icon="💐")
 
@@ -99,8 +101,11 @@ if prompt := st.chat_input("Ask about your uploaded items..."):
             
             gemini_parts.append(prompt)
             
-            # --- MODEL UPDATED HERE TO 1.5 FLASH ---
-            response = client.models.generate_content(model="gemini-1.5-flash", contents=gemini_parts)
+            # --- USING FULL MODEL PATH TO PREVENT 404 ---
+            response = client.models.generate_content(
+                model="models/gemini-1.5-flash", 
+                contents=gemini_parts
+            )
             
             st.session_state.last_response = response.text
             st.session_state.document_content += f"\n\n--- Analysis ---\n{response.text}"
