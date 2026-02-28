@@ -9,7 +9,7 @@ Built with **Python** and **Streamlit**, and fully **Containerized using Docker*
 ## 🚀 Live Demo & Deployment
 Experience the application live or pull the production-ready container:
 
-* **🌐 Live App (Streamlit Cloud):** [Insert Your Streamlit Cloud URL Here]
+* **🌐 Live App (Streamlit Cloud):** https://rajarajan71-multimodel-app-app-d8u5i2.streamlit.app/
 * **🐳 Docker Hub Image:** `docker pull rajann71/palludagam-ai-hub:v1`
 
 ---
