@@ -22,6 +22,38 @@ Experience the application live or pull the production-ready container:
 - Reduced Docker image size by 40%
 - Production-ready Streamlit application
 
+# 📸 Application Demo
+
+## 🏠 Home Page
+
+The landing page of Palludagam AI where users can select the type of content they want to analyze.
+
+![Home](images/home.png)
+
+---
+
+## 📤 File Upload
+
+Upload Images, PDF documents, or Audio files for AI-powered analysis.
+
+![Uploading](images/uploading.png)
+
+---
+
+## ⏳ AI Processing
+
+The application processes the uploaded content using Google Gemini 2.5 Flash.
+
+![Loading](images/loading.png)
+
+---
+
+## 🧠 AI Generated Output
+
+Displays detailed AI-generated insights, summaries, and responses based on the uploaded content.
+
+![Output](images/output.png)
+
   
 ## ✨ Key Features
 * **Multimodal Analysis:** Upload images, audio files, or PDFs and get instant AI-generated insights.
