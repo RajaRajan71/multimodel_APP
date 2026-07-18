@@ -14,6 +14,15 @@ Experience the application live or pull the production-ready container:
 
 ---
 
+## 🚀 Project Highlights
+
+- Built with Gemini 2.5 Flash
+- Supports Image, PDF and Audio inputs
+- Dockerized for consistent deployment
+- Reduced Docker image size by 40%
+- Production-ready Streamlit application
+
+  
 ## ✨ Key Features
 * **Multimodal Analysis:** Upload images, audio files, or PDFs and get instant AI-generated insights.
 * **Gemini 2.5 Flash Integration:** High-speed, high-accuracy processing using Google's latest Generative AI models.
